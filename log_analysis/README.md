@@ -63,19 +63,19 @@ This screenshot shows the log evidence for the successful `su` session. The log 
 
 ---
 
-### Evidence 5: User-Related Log Evidence
+### Evidence 5: New User Account Creation Evidence
+
+![New user account creation evidence](newuser.png)
+
+This screenshot shows evidence related to the creation of the new user account `newuser1`.
+
+---
+### Evidence 6: User-Related Log Evidence
 
 ![User-related log evidence](user.png)
 
 This screenshot shows user-related log entries collected during the investigation.
 
----
-
-### Evidence 6: New User Account Creation Evidence
-
-![New user account creation evidence](newuser.png)
-
-This screenshot shows evidence related to the creation of the new user account `newuser1`.
 
 ---
 
