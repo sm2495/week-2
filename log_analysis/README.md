@@ -120,7 +120,7 @@ The new user creation logs showed activity related to the creation of the user `
 | 2026-06-08 10:22:02 | Failed `su` login attempt | Continued failed login activity |
 | 2026-06-08 10:22:08 | Failed `su` login attempt | Possible brute-force behavior |
 | 2026-06-08 10:22:17 | Failed `su` login attempt | Repeated failed access attempt |
-| 2026-06-08 10:26:19 | Successful `su` login for `testuser` | Valid access occurred after failed attempts |
+| 2026-06-08 10:22:30 | Successful `su` login for `testuser` | Valid access occurred after failed attempts |
 | 2026-06-08 10:22:51 | New user `newuser1` created | New account creation activity; could indicate persistence in a real incident |
 
 ---
