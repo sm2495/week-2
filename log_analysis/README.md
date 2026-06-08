@@ -29,16 +29,53 @@ The investigation included failed `su` login attempts, one successful `su` login
 
 ---
 
-## Screenshots
+## Evidence Screenshots
 
-| Screenshot File | Description |
-|---|---|
-| `failed.png` | Shows failed `su` login attempts |
-| `success.png` | Shows successful `su` login evidence |
-| `newuser.png` | Shows new user account creation evidence |
-| `grep.png` | Shows extracted log evidence using `grep` |
-| `pass.png` | Shows password/login-related terminal activity |
-| `user.png` | Shows user-related log evidence |
+### Failed `su` Login Attempts
+
+![Failed login attempts](failed.png)
+
+This screenshot shows the failed `su` login activity. Multiple failed login attempts were generated to simulate possible password guessing behavior.
+
+---
+
+### Extracted Failed Login Evidence Using `grep`
+
+![Grep evidence](grep.png)
+
+This screenshot shows log evidence extracted from `/var/log/auth.log` using the `grep` command. The output includes authentication failure entries related to the failed `su` attempts.
+
+---
+
+### Successful `su` Login Evidence
+
+![Successful login evidence](success.png)
+
+This screenshot shows evidence of a successful `su` session. The log entry confirms that a session was opened for the user `testuser`.
+
+---
+
+### Password/Login Activity
+
+![Password activity](pass.png)
+
+This screenshot shows password or login-related terminal activity during the investigation.
+
+---
+
+### User-Related Log Evidence
+
+![User evidence](user.png)
+
+This screenshot shows user-related log entries found during the investigation.
+
+---
+
+### New User Account Creation Evidence
+
+![New user evidence](newuser.png)
+
+This screenshot shows evidence related to the creation of the new user account `newuser1`.
 
 ---
 
