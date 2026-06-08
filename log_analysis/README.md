@@ -29,33 +29,33 @@ The investigation included failed `su` login attempts, one successful `su` login
 
 ---
 
-## Evidence Screenshots
+## Evidence Sequence
 
-### Failed `su` Login Attempts
+### Evidence 1: Failed `su` Login Attempts
 
-![Failed login attempts](failed.png)
+![Failed su login attempts](failed.png)
 
-This screenshot shows the failed `su` login attempts generated during the investigation.
-
----
-
-### Failed Login Log Evidence Using `grep`
-
-![Failed login grep evidence](grep.png)
-
-This screenshot shows the extracted failed login entries from `/var/log/auth.log` using the `grep` command. The output includes authentication failure entries related to the failed `su` attempts.
+This screenshot shows the failed `su` login attempts generated during the investigation. These attempts were created to simulate repeated failed authentication activity.
 
 ---
 
-### Successful `su` Login in Terminal
+### Evidence 2: Failed Login Log Evidence
+
+![Failed login log evidence](grep.png)
+
+This screenshot shows the failed login entries extracted from `/var/log/auth.log` using `grep`. The log entries show authentication failure messages, which confirm that the failed `su` attempts were recorded.
+
+---
+
+### Evidence 3: Successful `su` Login in Terminal
 
 ![Successful su login terminal](pass.png)
 
-This screenshot shows the successful `su` login in the terminal. It confirms that the user session switched successfully to `testuser`.
+This screenshot shows the successful `su` login in the terminal. It confirms that the session switched successfully to the user `testuser`.
 
 ---
 
-### Successful `su` Login Log Evidence
+### Evidence 4: Successful Login Log Evidence
 
 ![Successful login log evidence](success.png)
 
@@ -63,15 +63,15 @@ This screenshot shows the log evidence for the successful `su` session. The log 
 
 ---
 
-### User-Related Log Evidence
+### Evidence 5: User-Related Log Evidence
 
 ![User-related log evidence](user.png)
 
-This screenshot shows user-related log evidence collected during the investigation.
+This screenshot shows user-related log entries collected during the investigation.
 
 ---
 
-### New User Account Creation Evidence
+### Evidence 6: New User Account Creation Evidence
 
 ![New user account creation evidence](newuser.png)
 
@@ -79,31 +79,35 @@ This screenshot shows evidence related to the creation of the new user account `
 
 ---
 
-## Extracted Evidence
+## Log Analysis
 
-### Failed Login Evidence
+### Failed Login Logs
 
-Failed login attempts were extracted using this command:
+Command used:
 
     sudo grep "authentication failure" /var/log/auth.log
 
-The log entries showed multiple authentication failures for the `su` command. These entries are important because repeated failed login attempts may suggest password guessing or brute-force behavior in a real investigation.
+The failed login logs showed multiple authentication failures for the `su` command. These logs are important because repeated failed login attempts may indicate password guessing or brute-force behavior in a real investigation.
 
-### Successful Login Evidence
+---
 
-Successful login activity was extracted using this command:
+### Successful Login Logs
+
+Command used:
 
     sudo grep "session opened for user testuser" /var/log/auth.log
 
-The log evidence showed that a session was opened for the user `testuser`. This confirms that a successful `su` login occurred after the failed attempts.
+The successful login logs showed that a session was opened for the user `testuser`. This confirms that a successful `su` login occurred after the failed attempts.
 
-### New User Creation Evidence
+---
 
-New user creation activity was extracted using this command:
+### New User Creation Logs
+
+Command used:
 
     sudo grep "newuser1" /var/log/auth.log
 
-The log entries showed that the user `newuser1` was created. The evidence included user and group creation activity, as well as password setup. In a real investigation, new user creation can be important because attackers may create accounts to maintain access to a system.
+The new user creation logs showed activity related to the creation of the user `newuser1`. The evidence included user and group creation activity, as well as password setup. In a real investigation, new user creation can be suspicious because attackers may create accounts to maintain access to a system.
 
 ---
 
