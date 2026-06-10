@@ -12,7 +12,7 @@ The detections cover:
 
 ---
 
-## Detection 1 — Failed Authentication Attempts
+## Detection 1: Failed Authentication Attempts
 
 ### Detection Logic
 
@@ -43,7 +43,7 @@ A legitimate user may forget their password and enter it incorrectly several tim
 
 ---
 
-## Detection 2 — Successful Login After Failures
+## Detection 2: Successful Login After Failures
 
 ### Detection Logic
 
@@ -74,7 +74,7 @@ A legitimate user may type the wrong password several times before successfully 
 
 ---
 
-## Detection 3 — New User Creation
+## Detection 3: New User Creation
 
 ### Detection Logic
 
