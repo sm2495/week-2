@@ -33,7 +33,7 @@ This command is useful because repeated failed authentication attempts may indic
 
 ### Screenshot Evidence
 
-![Successful Login After Failures](week2/screenshots/success_login.png)
+![Successful Login After Failures](success_login.png)
 
 ### Documentation
 
@@ -51,7 +51,7 @@ This command is useful because a successful login or session after repeated fail
 
 ### Screenshot Evidence
 
-![New User Creation](week2/screenshots/newuser.png)
+![New User Creation](newuser.png)
 
 ### Documentation
 
