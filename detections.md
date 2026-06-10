@@ -6,11 +6,6 @@ This repository contains the GitHub evidence for the Week 2 detection engineerin
 
 ---
 
-## Repository File
-
-`week2/detections.md`
-
----
 
 ## Detection 1 — Failed Authentication Attempts
 
@@ -20,7 +15,7 @@ This repository contains the GitHub evidence for the Week 2 detection engineerin
 
 ### Screenshot Evidence
 
-![Failed Authentication Attempts](week2/screenshots/pass_guessing.png)
+![Failed Authentication Attempts](week2/pass_guessing.png)
 
 ### Documentation
 
