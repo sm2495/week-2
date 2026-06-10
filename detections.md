@@ -1,4 +1,4 @@
-# Week 2 — Detection Engineering
+# Week 2 — Detection
 
 ## Overview
 
