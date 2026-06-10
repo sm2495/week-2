@@ -56,14 +56,3 @@ This detection identifies local user account creation. The screenshot shows the 
 
 This command is useful because new local account creation can be important evidence in an investigation. If performed by an attacker, it may show an attempt to maintain access to the system.
 
----
-
-## Evidence Summary
-
-The screenshots provide evidence for all three required detections:
-
-1. Failed authentication attempts  
-2. Successful login after failures  
-3. New user creation  
-
-These commands show how Linux authentication logs can be searched to identify suspicious activity.
