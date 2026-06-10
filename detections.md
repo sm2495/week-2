@@ -17,7 +17,6 @@ This repository contains the GitHub evidence for the Week 2 detection engineerin
 
 ![Failed Authentication Attempts](pass_guessing.png)
 
-### Documentation
 
 This detection identifies repeated failed authentication attempts in the Linux authentication log. The screenshot shows multiple `pam_unix(su:auth): authentication failure` entries. These entries show failed attempts to authenticate using `su`.
 
@@ -35,7 +34,6 @@ This command is useful because repeated failed authentication attempts may indic
 
 ![Successful Login After Failures](success_login.png)
 
-### Documentation
 
 This detection identifies a successful authentication session after previous failed authentication attempts. The screenshot shows failed `su` authentication attempts followed by a successful session opened for the root user.
 
@@ -53,7 +51,6 @@ This command is useful because a successful login or session after repeated fail
 
 ![New User Creation](newuser.png)
 
-### Documentation
 
 This detection identifies local user account creation. The screenshot shows the `adduser` command being executed and a new user account named `newuser1` being created.
 
