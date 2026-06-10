@@ -15,7 +15,7 @@ This repository contains the GitHub evidence for the Week 2 detection engineerin
 
 ### Screenshot Evidence
 
-![Failed Authentication Attempts](week2/pass_guessing.png)
+![Failed Authentication Attempts](pass_guessing.png)
 
 ### Documentation
 
