@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains my Week 2 detection engineering documentation. The task focused on creating basic Linux log-based detections using `/var/log/auth.log` and command-line tools such as `grep`.
+This repository contains my week 2 detection documentation. The task focused on creating basic Linux log-based detections using `/var/log/auth.log` and command-line tools such as `grep`.
 
 The detections cover:
 
