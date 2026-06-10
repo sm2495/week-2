@@ -24,7 +24,7 @@ This detection searches the authentication log for failed authentication events.
 
 ### Screenshot Evidence
 
-![Failed Authentication Attempts](week2/pass_guessing.png)
+![Failed Authentication Attempts](pass_guessing.png)
 
 
 This detection identifies repeated failed authentication attempts in the Linux authentication log. The screenshot shows multiple `pam_unix(su:auth): authentication failure` entries. These entries show failed attempts to authenticate using `su`.
@@ -55,7 +55,7 @@ This detection searches for failed `su` authentication attempts and successful `
 
 ### Screenshot Evidence
 
-![Successful Login After Failures](week2/success_login.png)
+![Successful Login After Failures](success_login.png)
 
 
 This detection identifies a successful authentication session after previous failed authentication attempts. The screenshot shows failed `su` authentication attempts followed by a successful session opened for the root user.
@@ -86,7 +86,7 @@ This detection searches the authentication log for user creation activity.
 
 ### Screenshot Evidence
 
-![New User Creation](week2/newuser.png)
+![New User Creation](newuser.png)
 
 
 This detection identifies local user account creation. The screenshot shows the `adduser` command being executed and a new user account named `newuser1` being created.
