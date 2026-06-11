@@ -127,7 +127,15 @@ AND same_source_ip = true
 AND successful_login occurs within 5 minutes
 THEN generate alert "Multiple Failed Logins Followed by Successful Login"
 ```
+### MITRE ATT&CK Mapping
 
+| Evidence | Meaning | MITRE ATT&CK Technique |
+|---|---|---|
+| Multiple failed login attempts | Attacker attempted password guessing | T1110 Brute Force |
+| Successful login after failures | Attacker used valid credentials | T1078 Valid Accounts |
+| Login from unknown device | Suspicious account access | T1078 Valid Accounts |
+| Customer search activity | Unauthorized access to business data | Valid account misuse |
+| Attempted bulk export | Possible data theft attempt | Data exfiltration behavior |
 
 
 ## Investigation Artifacts
