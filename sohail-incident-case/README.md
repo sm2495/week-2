@@ -144,4 +144,48 @@ The investigation artifacts are the evidence and analysis materials created duri
 | MITRE ATT&CK Mapping | Connects the activity to brute-force and valid account techniques |
 | Response Actions | Shows containment and eradication steps taken by the SOC team |
 
+---
 
+## Report Assets
+
+This section documents the company assets involved in the incident, including the affected business system, compromised account, targeted data, and security evidence used during the investigation.
+
+| Asset | Asset Type | Role in Incident | Risk/Impact |
+|---|---|---|---|
+| Sohail CRM Platform | Business Application | Main service affected by the incident | Unauthorized access could expose customer and sales data |
+| `m.alhassan@sohail.local` | User Account | Account targeted and likely compromised | Attacker used valid credentials to access the CRM |
+| Customer Profiles | Business Data | Accessed through CRM customer search activity | Possible exposure of customer information |
+| Customer Lead Records | Business Data | Targeted during attempted export of `customer_leads.csv` | Possible data theft or sales intelligence leakage |
+| CRM Authentication Logs | Security Evidence | Recorded failed logins, successful login, source IP, and session ID | Helped confirm brute-force activity |
+| CRM Application Logs | Security Evidence | Recorded customer search and attempted data export | Helped identify suspicious post-login behavior |
+| SIEM Alert | Security Monitoring Asset | Generated alert for failed logins followed by successful login | Helped SOC detect and prioritize the incident |
+| Firewall Controls | Security Control | Used to block suspicious IP address `185.77.45.91` | Prevented further access attempts |
+| IAM System | Identity Management Asset | Used to disable account, revoke sessions, and reset password | Helped contain and eradicate the compromise |
+
+---
+
+## Supporting Documentation
+
+### NIST Incident Response Lifecycle Mapping
+
+| Phase | Application to This Incident |
+|---|---|
+| Preparation | Sohail had CRM logging, SIEM alerts, authentication logs, role-based access control, and export restrictions. |
+| Detection and Analysis | The SIEM detected repeated failed logins followed by a successful login. CRM logs confirmed suspicious customer search and export activity. |
+| Containment | The compromised account was disabled, the active session was revoked, and the suspicious IP was blocked. |
+| Eradication | The password was reset, active sessions were invalidated, and the account was checked for unauthorized changes. |
+| Recovery | Access was restored to the legitimate user after securing the account, with increased monitoring for 48 hours. |
+| Lessons Learned | Sohail should enforce MFA, account lockout, conditional access, stronger logging, and tighter export permissions. |
+
+### Recommendations Summary
+
+| Recommendation | Risk Addressed | Expected Benefit |
+|---|---|---|
+| MFA | Stolen or guessed passwords | Prevents password-only login |
+| Account Lockout | Brute-force attempts | Locks accounts after repeated failures |
+| Rate Limiting | Automated guessing | Slows brute-force tools |
+| Conditional Access | Risky logins | Blocks unusual devices or locations |
+| Enhanced Logging | Limited visibility | Improves investigations |
+| RBAC | Excessive permissions | Limits damage after compromise |
+| Export Approval | Data theft | Prevents unauthorized exports |
+| SIEM Tuning | Missed alerts | Improves detection accuracy |
